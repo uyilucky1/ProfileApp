@@ -21,5 +21,5 @@ From: {user_email}
 """
     button = st.form_submit_button('Submit')
     if button:
-        send_mail(message)
+        send_email(message)
         st.info('Success!!!')
