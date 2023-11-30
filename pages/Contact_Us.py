@@ -2,7 +2,7 @@ import streamlit as st
 from send_email import send_mail
 import pandas as pd
 
-df = pd.read_csv('Portfolio/topics.csv')
+df = pd.read_csv('ProfileApp/topics.csv')
 
 st.header('Contact Me')
 with st.form(key='email_forms'):
@@ -21,5 +21,5 @@ From: {user_email}
 """
     button = st.form_submit_button('Submit')
     if button:
-        send_email(message)
+        send_mail(message)
         st.info('Success!!!')
